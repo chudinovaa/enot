@@ -1,80 +1,45 @@
 import React, { FC } from 'react';
 import { TodoItem } from '../TodoItem/TodoItem';
-import { Accordion,  AccordionDetails, AccordionSummary, styled, Typography, } from '@mui/material';
+import { AccordionDetails, AccordionSummary, } from '@mui/material';
 import { ITodoGroupProps } from '../TodoGroup/TodoGroup';
 import ExpandCircleDownRoundedIcon from '@mui/icons-material/ExpandCircleDownRounded';
+import { StyledAccordion } from '../StyledAccordion/StyledAccordion';
+import { TodosTitle } from '../TodosTitle/TodosTitle';
+import { baseTheme } from '../../styles/theme';
 
 
 export const TodoAccordion: FC<ITodoGroupProps> = (props) => {
-  const CustomizedAccordion = styled(Accordion)(() => ({
-    '& .MuiPaper-root': {
-      color: 'darkslategray',
-      backgroundColor: 'inherit',
-      borderRadius: '40px',
-      boxShadow: 'none',
-    },
-    '& .MuiAccordion-root': {
-      borderRadius: '10px'
-    },
-    // '& .MuiAccordionDetails-root': {
-    //   padding: 0
-    // },
-    'MuiButtonBase-root MuiAccordionSummary-root MuiAccordionSummary-gutters MuiButtonBase-root-MuiAccordionSummary-root': {
-      borderRadius: '10px'
-    },
-    boxShadow: 'none'
-  }));
-
 
 
   return (
-    // <Paper
-    //   elevation={24}
-    //   sx={{
-    //     borderRadius: '40px',
-    //     background: `${baseTheme.table_color}`,
-    //     color: baseTheme.text_primary_color,
-    //     // padding: '16px 25px 2px 17px',
-    //     display: 'flex',
-    //     flexDirection: 'column'
-    //   }}
-    // >
+    <StyledAccordion>
 
 
-      <CustomizedAccordion
+      <AccordionSummary
         sx={{
-          // background: `${baseTheme.table_color}`,
-          // color: baseTheme.text_primary_color,
-          // display: 'flex',
-          // flexDirection: 'column',
-          // background: '#ccb34c',
-        }}>
-    <Accordion >
-        <AccordionSummary sx={{
-          padding: 0,
-          margin: '20px 20px',
-          // borderRadius: '50px',
-          background: 'red'
+          padding: '2px 0 0 0',
+          marginRight: '12px',
         }}
-          expandIcon={<ExpandCircleDownRoundedIcon/>}
-          aria-controls="panel1a-content"
-          id="panel3bh-header"
-        >
-          <Typography>Accordion 1</Typography>
-        </AccordionSummary>
-        <AccordionDetails>
+        expandIcon={<ExpandCircleDownRoundedIcon sx={{ color: baseTheme.text_primary_color}}/>}
+        aria-controls="panel1a-content"
+        id="panel3bh-header"
+      >
+        <TodosTitle title={'Название'}/>
+      </AccordionSummary>
 
 
-          {!!props && props.todos.map((todo, index) => (
-            <TodoItem key={index} {...todo}/>
-          ))}
+      <AccordionDetails
+        sx={{padding: '0'}}
+      >
 
 
-        </AccordionDetails>
-    </Accordion>
-      </CustomizedAccordion>
+        {!!props && props.todos.map((todo, index) => (
+          <TodoItem key={index} {...todo}/>
+        ))}
 
 
-    // </Paper>
+      </AccordionDetails>
+    </StyledAccordion>
+
   );
 };

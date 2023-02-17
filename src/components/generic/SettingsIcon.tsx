@@ -1,5 +1,5 @@
 import React from 'react';
-import { IconButton, SvgIcon, SvgIconProps } from '@mui/material';
+import { SvgIcon, SvgIconProps } from '@mui/material';
 
 export const SettingsIcon = (props: SvgIconProps) => (
     <SvgIcon {...props} viewBox="0 0 29 30">

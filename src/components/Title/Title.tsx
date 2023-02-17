@@ -6,7 +6,6 @@ export const Title = () => {
   return (
     <Box
       sx={{
-        background: 'orange',
         display: 'flex',
         flexDirection: 'row',
         m: '21px 36px 15px 36px',

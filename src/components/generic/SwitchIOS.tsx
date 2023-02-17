@@ -1,8 +1,6 @@
 import React, { FC } from 'react';
-import { FormGroup, styled, Switch, SwitchProps } from '@mui/material';
+import { styled, Switch, SwitchProps } from '@mui/material';
 import { colors } from '../../styles/vars';
-import CheckCircleSharpIcon from '@mui/icons-material/CheckCircleSharp';
-import CancelSharpIcon from '@mui/icons-material/CancelSharp';
 
 interface SwitchIOSProps {
   props?: SwitchProps,

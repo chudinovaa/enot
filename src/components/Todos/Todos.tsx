@@ -13,6 +13,7 @@ export const Todos = () => {
         height: '844px',
         background: baseTheme.menu_color,
         borderRadius: '30px',
+        overflow: 'hidden'
       }}
     >
 

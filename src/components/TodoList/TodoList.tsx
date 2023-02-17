@@ -1,13 +1,12 @@
 import React from 'react';
-import { Box, Paper } from '@mui/material';
-import { ITodoGroupProps, TodoGroup } from '../TodoGroup/TodoGroup';
+import { Box } from '@mui/material';
+import { TodoGroup } from '../TodoGroup/TodoGroup';
 import { ITodoItemProps } from '../TodoItem/TodoItem';
 import { TodoAccordion } from '../TodoAccordion/TodoAccordion';
-import { TodoAccordion2 } from '../TodoAccordion/TodoAccordion2';
 
 export const TodoList = () => {
 
-  const todos : ITodoItemProps[] = [
+  const todos: ITodoItemProps[] = [
     {
       title: 'Visit David',
       description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eum, sunt.',
@@ -29,12 +28,10 @@ export const TodoList = () => {
   ]
 
 
-
   return (
     <Box sx={{padding: '0 20px'}}>
       <TodoGroup todos={todos}/>
-      {/*<TodoAccordion todos={todos}/>*/}
-      <TodoAccordion2 todos={todos}/>
+      <TodoAccordion todos={todos}/>
     </Box>
   );
 };

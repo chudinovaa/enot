@@ -1,8 +1,7 @@
 import React from 'react';
 import Menu from '@mui/material/Menu';
 import MenuItem from '@mui/material/MenuItem';
-import { SettingsIcon } from '../generic/SettingsIcon';
-import { Box, createSvgIcon, IconButton } from '@mui/material';
+import { Box } from '@mui/material';
 
 export const Settings = () => {
   const [anchorEl, setAnchorEl] = React.useState<null | HTMLElement>(null);

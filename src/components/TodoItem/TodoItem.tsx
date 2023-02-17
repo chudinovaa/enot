@@ -24,7 +24,6 @@ export const TodoItem: FC<ITodoItemProps> = ({title, description, isComplete, im
         flexDirection: 'row',
         justifyContent: 'space-between',
         margin: '0 0 16px 0',
-        border: '1px solid red'
       }}>
 
 
